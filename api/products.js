@@ -1,8 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const { check, validationResult } = require('express-validator')
-const bcrypt = require('bcryptjs')
-const jwt = require('jsonwebtoken')
 require('dotenv').config()
 const User = require('../models/User')
 const Product = require('../models/Product')
