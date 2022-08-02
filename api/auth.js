@@ -33,7 +33,7 @@ router.post('/login', [
 
         //Checking if user exits in database
         const user = await User.findOne({email})
-        console.log(user)
+      
         if(!user){
             return res.status(400).json({msg : [{msg : 'Bad Credentials'}]})
         }
@@ -45,7 +45,9 @@ router.post('/login', [
         
         const payload = {
 
-                userID : user.id
+            user :{
+                id : user.id
+            }
             
         }
 
