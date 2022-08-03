@@ -26,7 +26,7 @@ app.use('/api/cart', require('./api/cart'))
 app.use('/api/users', require('./api/users'))
 app.use('/api/auth', require('./api/auth'))
 app.use('/api/products', require('./api/products'))
-
+app.use('/api/cart' , require('./api/cart'))
 
 
 

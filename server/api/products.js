@@ -48,7 +48,7 @@ router.get('/' , async (req,res)=>{
         const products = await Product.find()
         
         // Checking if products exist in db
-        if(!products){
+        if(!products.length > 0){
 
             return res.json({msg : "No products available for now !"})
         }
@@ -73,7 +73,7 @@ Method       : GET
 Route        : /api/products/
 Type         : PUBLIC
 ACCESS_LEVEL : EVERYONE
-Description  : Returns all products in db
+Description  : Returns a single product given its id
 
 */
 
